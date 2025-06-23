@@ -148,3 +148,13 @@ if expression_file and metadata_file:
         fig, ax = plt.subplots()
         sns.scatterplot(data=pca_df, x="PC1", y="PC2", hue="Condition", s=100, palette="Blues")
         st.pyplot(fig)
+# 대체 예시 (간단한 구조로 임시 구현)
+def load_patient_data(expression_file, metadata_file):
+    import pandas as pd
+    expr_df = pd.read_excel(expression_file, index_col=0)
+    meta_df = pd.read_excel(metadata_file)
+    return expr_df, meta_df
+
+def predict_cancer_type(expr_df, patient_id):
+    import random
+    return random.choice(["Lung", "Breast", "Colon", "Prostate"])
