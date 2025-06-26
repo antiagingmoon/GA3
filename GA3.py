@@ -1,3 +1,7 @@
+pyenv install 3.11.9
+pyenv global 3.11.9
+pip install -r requirements.txt
+pip install --upgrade pip
 import streamlit as st
 import pandas as pd
 import seaborn as sns
